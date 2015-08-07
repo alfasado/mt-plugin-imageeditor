@@ -1,0 +1,14 @@
+<mtapp:setting
+   id="api_key"
+   label="<__trans phrase="Client ID for Adobe Creative SDK">"
+   hint="<__trans phrase='<a href="[_1]" target="_blank">Sign up Adobe Creative SDK, and create app and get Client ID on MyApps screen.</a>' params='https://creativesdk.adobe.com/myapps.html'>"
+   show_hint="1">
+  <input type="text" value="<mt:var name="api_key" escape="html">" name="api_key" id="api_key" class="text" />
+</mtapp:setting>
+<mtapp:setting
+   id="tools"
+   label="<__trans phrase="Editor Tools">"
+   hint="<__trans phrase='Available properties are on "tools" in <a href="[_1]" target="_blank">GETTING STARTED</a> page. If empty, all tools of editor become active.' params='https://creativesdk.adobe.com/docs/web/#/articles/gettingstarted/index.html'>"
+   show_hint="1">
+  <input type="text" value="<mt:var name="tools" escape="html">" name="tools" id="tools" class="text" />
+</mtapp:setting>

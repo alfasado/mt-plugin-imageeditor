@@ -1,0 +1,23 @@
+id: ImageEditor
+name: Image Editor by Adobe Creative SDK
+key: imageeditor
+author_name: Alfasado Inc.
+author_link: http://alfasado.net/
+description: <__trans phrase="Image editor by Adobe Creative SDK on edit asset screen.">
+version: 0.1
+l10n_class: ImageEditor::L10N
+system_config_template: imageeditor_config.tmpl
+settings:
+    api_key:
+        default:
+        updatable: 1
+    tools:
+        default: crop, resize, text
+        updatable: 1
+applications:
+    cms:
+        methods:
+            replace_asset: $imageeditor::ImageEditor::CMS::_mode_replace_asset
+callbacks:
+    MT::App::CMS::template_source.edit_asset: $imageeditor::ImageEditor::Plugin::_cb_ts_edit_asset
+    MT::App::CMS::template_param.edit_asset: $imageeditor::ImageEditor::Plugin::_cb_tp_edit_asset
